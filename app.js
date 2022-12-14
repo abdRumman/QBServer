@@ -140,7 +140,7 @@ app.get('/getCustomers', function (req, res) {
 
   oauthClient
     .makeApiCall({
-      url: `${url}/v3/company/${companyID}/query?query=select * from Customer Where&minorversion=65`,
+      url: `${url}/v3/company/${companyID}/query?query=select * from Customer&minorversion=65`,
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
