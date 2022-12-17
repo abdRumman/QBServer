@@ -14,6 +14,68 @@ const OAuthClient = require('intuit-oauth');
 const bodyParser = require('body-parser');
 const ngrok = process.env.NGROK_ENABLED === 'true' ? require('ngrok') : null;
 
+const cc = {
+  query: `CustomFieldsQuery__qbo_custom_fields_ui_qbo {
+  company {
+      id,
+      ...F1
+  }
+}
+fragment F0 on Company {
+  id,
+  customFieldDefinitions(first:1000 ) {
+      edges {
+          node {
+              id
+              schema {
+                  type
+                  title
+                  format
+                  allowedOperations
+                  allowedValues {
+                      id
+                      value
+                      deleted
+                      order
+                  },
+                  id
+                  __typename
+                  metadataProperties
+              }
+              name
+              deleted
+              associatedEntityTypes {
+                  type
+                  deleted
+                  allowedOperations
+                  entityConditions {
+                      subtype
+                      deleted
+                      allowedOperations
+                  }
+              }
+              customFieldDefinitionMetaModel {
+                  suggested
+              }
+              __typename
+          }
+          cursor
+      }
+      pageInfo {
+          hasNextPage
+          hasPreviousPage
+          startCursor
+          endCursor
+      }
+  }
+} 
+fragment F1 on Company {
+  customFieldDefinitionsPageInfo:customFieldDefinitions {
+      totalCount
+  }
+  id
+  ...F0
+}`}
 /**
  * Configure View and Handlebars
  */
@@ -141,6 +203,33 @@ app.get('/getCustomers', function (req, res) {
   oauthClient
     .makeApiCall({
       url: `${url}/v3/company/${companyID}/query?query=select * from Customer&minorversion=65`,
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then(function (authResponse) {
+      console.log(`The response for API call is :${JSON.stringify(authResponse)}`);
+      res.send(JSON.parse(authResponse.text()));
+    })
+    .catch(function (e) {
+      console.error(e);
+    });
+});
+/**
+ * getMew()
+ */
+app.get('/getMew', function (req, res) {
+  const companyID = oauthClient.getToken().realmId;
+
+  const url =
+    oauthClient.environment == 'sandbox'
+      ? OAuthClient.environment.sandbox
+      : OAuthClient.environment.production;
+
+  oauthClient
+    .makeApiCall({
+      url: `${url}/v3/company/${companyID}/preferences?minorversion=40`,
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

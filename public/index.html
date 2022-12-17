@@ -63,6 +63,7 @@
 
     <script type="text/javascript">
         (function () {
+            getCustomers()
 
             function authorizeUri() {
 
@@ -71,7 +72,7 @@
                     clientId: `AB0dZiGusUgm3gAC6UK4ngLmg04xNhKbuoT6rTO9xqqNc4rHoe`,
                     clientSecret: `6bRtDE5QYr8nuRoHA8HREJsvUBIcHlGBQOANl9Ww`,
                     environment: `sandbox`,
-                    redirectUri: 1 === 1    ? `http://localhost:3003/callback` : `https://abood-abood.onrender.com/callback`
+                    redirectUri: 1 === 1 ? `http://localhost:3003/callback` : `https://abood-abood.onrender.com/callback`
                 };
                 /*      jsonBody.clientId = $('#clientId').val();
                      jsonBody.clientSecret = $('#clientSecret').val();
@@ -126,27 +127,33 @@
                 });
             }
 
+            function getCustomers() {
+                $.get('/getCustomers', function (response) {
+                    addCustomerOptions(response?.QueryResponse?.Customer.map(custom => ({ text: custom?.DisplayName, value: custom.Id })))
+                });
+            }
+
+            const addCustomerOptions = (customerOptions) => {
+                customerOptions.forEach(option => {
+                    addOption(`#customer`, option)
+                });
+            }
+
+            function addOption(id, item) {
+                $(id).append(`<option value="${item?.value}">
+                                       ${item?.text}
+                                  </option>`);
+            }
+
             document.getElementById('authorizeUri').addEventListener('click', function response(e) {
                 e.preventDefault();
                 authorizeUri();
             });
 
-            document.getElementById('retrieveToken').addEventListener('click', function response(e) {
-                e.preventDefault();
-                retrieveToken();
-            });
-
-            document.getElementById('refreshToken').addEventListener('click', function response(e) {
-                e.preventDefault();
-                refreshToken();
-            });
-
-            document.getElementById('makeAPICall').addEventListener('click', function response(e) {
-                e.preventDefault();
-                makeAPICall();
-            });
-
         })();
+
+
+        
     </script>
 </body>
 

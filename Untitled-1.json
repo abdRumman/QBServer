@@ -1,0 +1,1163 @@
+{
+    "Preferences": {
+        "AccountingInfoPrefs": {
+            "UseAccountNumbers": false,
+            "TrackDepartments": false,
+            "ClassTrackingPerTxn": false,
+            "ClassTrackingPerTxnLine": false,
+            "FirstMonthOfFiscalYear": "January",
+            "TaxYearMonth": "January",
+            "TaxForm": "6",
+            "CustomerTerminology": "Customers"
+        },
+        "ProductAndServicesPrefs": {
+            "ForSales": true,
+            "ForPurchase": true,
+            "QuantityWithPriceAndRate": true,
+            "QuantityOnHand": true
+        },
+        "SalesFormsPrefs": {
+            "UsingProgressInvoicing": false,
+            "CustomField": [
+                {
+                    "CustomField": [
+                        {
+                            "Name": "SalesFormsPrefs.UseSalesCustom3",
+                            "Type": "BooleanType",
+                            "BooleanValue": false
+                        },
+                        {
+                            "Name": "SalesFormsPrefs.UseSalesCustom1",
+                            "Type": "BooleanType",
+                            "BooleanValue": true
+                        },
+                        {
+                            "Name": "SalesFormsPrefs.UseSalesCustom2",
+                            "Type": "BooleanType",
+                            "BooleanValue": false
+                        }
+                    ]
+                },
+                {
+                    "CustomField": [
+                        {
+                            "Name": "SalesFormsPrefs.SalesCustomName1",
+                            "Type": "StringType",
+                            "StringValue": "Crew #"
+                        }
+                    ]
+                }
+            ],
+            "CustomTxnNumbers": false,
+            "EmailCopyToCompany": false,
+            "AllowDeposit": false,
+            "AllowDiscount": true,
+            "DefaultDiscountAccount": "86",
+            "AllowEstimates": true,
+            "ETransactionEnabledStatus": "NotApplicable",
+            "ETransactionAttachPDF": false,
+            "ETransactionPaymentEnabled": false,
+            "IPNSupportEnabled": false,
+            "AllowServiceDate": false,
+            "AllowShipping": false,
+            "DefaultTerms": {
+                "value": "3"
+            },
+            "AutoApplyCredit": true,
+            "AutoApplyPayments": true,
+            "UsingPriceLevels": false,
+            "DefaultCustomerMessage": "Thank you for your business and have a great day!"
+        },
+        "EmailMessagesPrefs": {
+            "InvoiceMessage": {
+                "Subject": "Invoice from Craig's Design and Landscaping Services",
+                "Message": "Your invoice is attached.  Please remit payment at your earliest convenience.\nThank you for your business - we appreciate it very much.\n\nSincerely,\nCraig's Design and Landscaping Services"
+            },
+            "EstimateMessage": {
+                "Subject": "Estimate from Craig's Design and Landscaping Services",
+                "Message": "Please review the estimate below.  Feel free to contact us if you have any questions.\nWe look forward to working with you.\n\nSincerely,\nCraig's Design and Landscaping Services"
+            },
+            "SalesReceiptMessage": {
+                "Subject": "Sales Receipt from Craig's Design and Landscaping Services",
+                "Message": "Your sales receipt is attached.\nThank you for your business - we appreciate it very much.\n\nSincerely,\nCraig's Design and Landscaping Services"
+            },
+            "StatementMessage": {
+                "Subject": "Statement from Craig's Design and Landscaping Services",
+                "Message": "Your statement is attached.  Please remit payment at your earliest convenience.\nThank you for your business - we appreciate it very much.\n\nSincerely,\nCraig's Design and Landscaping Services"
+            }
+        },
+        "VendorAndPurchasesPrefs": {
+            "TrackingByCustomer": true,
+            "BillableExpenseTracking": true,
+            "POCustomField": [
+                {
+                    "CustomField": [
+                        {
+                            "Name": "PurchasePrefs.UsePurchaseCustom1",
+                            "Type": "BooleanType",
+                            "BooleanValue": true
+                        },
+                        {
+                            "Name": "PurchasePrefs.UsePurchaseCustom2",
+                            "Type": "BooleanType",
+                            "BooleanValue": true
+                        },
+                        {
+                            "Name": "PurchasePrefs.UsePurchaseCustom3",
+                            "Type": "BooleanType",
+                            "BooleanValue": false
+                        }
+                    ]
+                },
+                {
+                    "CustomField": [
+                        {
+                            "Name": "PurchasePrefs.PurchaseCustomName1",
+                            "Type": "StringType",
+                            "StringValue": "Crew #"
+                        },
+                        {
+                            "Name": "PurchasePrefs.PurchaseCustomName2",
+                            "Type": "StringType",
+                            "StringValue": "Sales Rep"
+                        }
+                    ]
+                }
+            ]
+        },
+        "TimeTrackingPrefs": {
+            "UseServices": true,
+            "BillCustomers": true,
+            "ShowBillRateToAll": false,
+            "WorkWeekStartDate": "Monday",
+            "MarkTimeEntriesBillable": true
+        },
+        "TaxPrefs": {
+            "UsingSalesTax": true,
+            "TaxGroupCodeRef": {
+                "value": "2"
+            }
+        },
+        "CurrencyPrefs": {
+            "MultiCurrencyEnabled": false,
+            "HomeCurrency": {
+                "value": "USD"
+            }
+        },
+        "ReportPrefs": {
+            "ReportBasis": "Accrual",
+            "CalcAgingReportFromTxnDate": false
+        },
+        "OtherPrefs": {
+            "NameValue": [
+                {
+                    "Name": "SalesFormsPrefs.DefaultCustomerMessage",
+                    "Value": "Thank you for your business and have a great day!"
+                },
+                {
+                    "Name": "SalesFormsPrefs.DefaultItem",
+                    "Value": "1"
+                },
+                {
+                    "Name": "DTXCopyMemo",
+                    "Value": "false"
+                },
+                {
+                    "Name": "UncategorizedAssetAccountId",
+                    "Value": "32"
+                },
+                {
+                    "Name": "UncategorizedIncomeAccountId",
+                    "Value": "30"
+                },
+                {
+                    "Name": "UncategorizedExpenseAccountId",
+                    "Value": "31"
+                },
+                {
+                    "Name": "SFCEnabled",
+                    "Value": "true"
+                },
+                {
+                    "Name": "DataPartner",
+                    "Value": "false"
+                },
+                {
+                    "Name": "Vendor1099Enabled",
+                    "Value": "true"
+                },
+                {
+                    "Name": "TimeTrackingFeatureEnabled",
+                    "Value": "true"
+                },
+                {
+                    "Name": "FDPEnabled",
+                    "Value": "true"
+                },
+                {
+                    "Name": "isDTXOnStage",
+                    "Value": "false"
+                },
+                {
+                    "Name": "ProjectsEnabled",
+                    "Value": "true"
+                },
+                {
+                    "Name": "VendorAndPurchasesPrefs.UseCustomTxnNumbers",
+                    "Value": "false"
+                },
+                {
+                    "Name": "DateFormat",
+                    "Value": "Month Date Year separated by a slash"
+                },
+                {
+                    "Name": "DateFormatMnemonic",
+                    "Value": "MMDDYYYY_SEP_SLASH"
+                },
+                {
+                    "Name": "NumberFormat",
+                    "Value": "US Number Format"
+                },
+                {
+                    "Name": "NumberFormatMnemonic",
+                    "Value": "US_NB"
+                },
+                {
+                    "Name": "WarnDuplicateCheckNumber",
+                    "Value": "true"
+                },
+                {
+                    "Name": "WarnDuplicateBillNumber",
+                    "Value": "false"
+                },
+                {
+                    "Name": "WarnDuplicateJournalNumber",
+                    "Value": "false"
+                },
+                {
+                    "Name": "SignoutInactiveMinutes",
+                    "Value": "60"
+                },
+                {
+                    "Name": "AccountingInfoPrefs.ShowAccountNumbers",
+                    "Value": "false"
+                },
+                {
+                    "Name": "VendorAndPurchasesPrefs.PurchaseOrderEnabled",
+                    "Value": "true"
+                },
+                {
+                    "Name": "VendorAndPurchasesPrefs.MarkupOnBillableExpenseEnabled",
+                    "Value": "false"
+                },
+                {
+                    "Name": "SalesFormsPrefs.AllowGratuity",
+                    "Value": "false"
+                }
+            ]
+        },
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "1",
+        "SyncToken": "3",
+        "MetaData": {
+            "CreateTime": "2022-12-07T02:19:34-08:00",
+            "LastUpdatedTime": "2022-12-07T05:06:39-08:00"
+        }
+    },
+    "time": "2022-12-17T09:43:22.573-08:00"
+}
+
+
+
+
+{
+    "data": {
+        "company": {
+            "customFieldDefinitionsPageInfo": {
+                "__typename": "Common_CustomFieldDefinitionConnection",
+                "totalCount": 9
+            },
+            "__typename": "Company",
+            "customFieldDefinitions": {
+                "__typename": "Common_CustomFieldDefinitionConnection",
+                "edges": [
+                    {
+                        "cursor": "c2ltcGxlLWN1cnNvcjA=",
+                        "node": {
+                            "schema": {
+                                "allowedValues": [],
+                                "allowedOperations": [
+                                    "REPORTS",
+                                    "SEARCH"
+                                ],
+                                "__typename": "Schema_Schema",
+                                "format": null,
+                                "metadataProperties": null,
+                                "id": null,
+                                "type": "string",
+                                "title": "Sales Rep (inactive)"
+                            },
+                            "customFieldDefinitionMetaModel": null,
+                            "deleted": true,
+                            "associatedEntityTypes": [
+                                {
+                                    "deleted": false,
+                                    "allowedOperations": [
+                                        "REPORTS",
+                                        "SEARCH"
+                                    ],
+                                    "entityConditions": [
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_CREDIT",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_INVOICE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_ESTIMATE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_REFUND",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "PURCHASE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "PURCHASE_BILL",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "PURCHASE::CHECK",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "PURCHASE_CREDIT",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "PURCHASE::CREDIT_CARD_CREDIT",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "PURCHASE_ORDER",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        }
+                                    ],
+                                    "__typename": "Common_CustomFieldDefinition_EntityType",
+                                    "type": "/transactions/Transaction"
+                                }
+                            ],
+                            "__typename": "Common_CustomFieldDefinition",
+                            "name": "sales2",
+                            "id": "djQ6OTEzMDM0ODg4NTEwNTUyNjovY29tbW9uL0N1c3RvbUZpZWxkRGVmaW5pdGlvbjo:900000000000289443"
+                        },
+                        "__typename": "Common_CustomFieldDefinitionEdge"
+                    },
+                    {
+                        "cursor": "c2ltcGxlLWN1cnNvcjE=",
+                        "node": {
+                            "schema": {
+                                "allowedValues": [],
+                                "allowedOperations": [],
+                                "__typename": "Schema_Schema",
+                                "format": null,
+                                "metadataProperties": null,
+                                "id": null,
+                                "type": "string",
+                                "title": "P.O. Number"
+                            },
+                            "customFieldDefinitionMetaModel": null,
+                            "deleted": false,
+                            "associatedEntityTypes": [
+                                {
+                                    "deleted": null,
+                                    "allowedOperations": [
+                                        "REPORTS",
+                                        "SEARCH",
+                                        "PRINT"
+                                    ],
+                                    "entityConditions": [
+                                        {
+                                            "deleted": null,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": null,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_CREDIT",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": null,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_INVOICE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": null,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_REFUND",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": null,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_ESTIMATE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        }
+                                    ],
+                                    "__typename": "Common_CustomFieldDefinition_EntityType",
+                                    "type": "/transactions/Transaction"
+                                }
+                            ],
+                            "__typename": "Common_CustomFieldDefinition",
+                            "name": "sales1",
+                            "id": "djQ6OTEzMDM0ODg4NTEwNTUyNjovY29tbW9uL0N1c3RvbUZpZWxkRGVmaW5pdGlvbjo:900000000000289444"
+                        },
+                        "__typename": "Common_CustomFieldDefinitionEdge"
+                    },
+                    {
+                        "cursor": "c2ltcGxlLWN1cnNvcjI=",
+                        "node": {
+                            "schema": {
+                                "allowedValues": [],
+                                "allowedOperations": [
+                                    "REPORTS",
+                                    "SEARCH"
+                                ],
+                                "__typename": "Schema_Schema",
+                                "format": null,
+                                "metadataProperties": null,
+                                "id": null,
+                                "type": "number",
+                                "title": "CREDIT (inactive)"
+                            },
+                            "customFieldDefinitionMetaModel": null,
+                            "deleted": true,
+                            "associatedEntityTypes": [
+                                {
+                                    "deleted": null,
+                                    "allowedOperations": [
+                                        "REPORTS",
+                                        "SEARCH"
+                                    ],
+                                    "entityConditions": [
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [],
+                                            "subtype": "CUSTOMER",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        }
+                                    ],
+                                    "__typename": "Common_CustomFieldDefinition_EntityType",
+                                    "type": "/network/Contact"
+                                },
+                                {
+                                    "deleted": null,
+                                    "allowedOperations": [
+                                        "REPORTS",
+                                        "SEARCH"
+                                    ],
+                                    "entityConditions": [
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_INVOICE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_ESTIMATE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_CREDIT",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_REFUND",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": true,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        }
+                                    ],
+                                    "__typename": "Common_CustomFieldDefinition_EntityType",
+                                    "type": "/transactions/Transaction"
+                                }
+                            ],
+                            "__typename": "Common_CustomFieldDefinition",
+                            "name": "udcf_3",
+                            "id": "djQ6OTEzMDM0ODg4NTEwNTUyNjovY29tbW9uL0N1c3RvbUZpZWxkRGVmaW5pdGlvbjo:900000000000289455"
+                        },
+                        "__typename": "Common_CustomFieldDefinitionEdge"
+                    },
+                    {
+                        "cursor": "c2ltcGxlLWN1cnNvcjM=",
+                        "node": {
+                            "schema": {
+                                "allowedValues": [],
+                                "allowedOperations": [
+                                    "REPORTS",
+                                    "SEARCH"
+                                ],
+                                "__typename": "Schema_Schema",
+                                "format": "date",
+                                "metadataProperties": null,
+                                "id": null,
+                                "type": "string",
+                                "title": "Ship date (inactive)"
+                            },
+                            "customFieldDefinitionMetaModel": null,
+                            "deleted": true,
+                            "associatedEntityTypes": [
+                                {
+                                    "deleted": null,
+                                    "allowedOperations": [
+                                        "REPORTS",
+                                        "SEARCH"
+                                    ],
+                                    "entityConditions": [
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_INVOICE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_ESTIMATE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_CREDIT",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_REFUND",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        }
+                                    ],
+                                    "__typename": "Common_CustomFieldDefinition_EntityType",
+                                    "type": "/transactions/Transaction"
+                                }
+                            ],
+                            "__typename": "Common_CustomFieldDefinition",
+                            "name": "udcf_4",
+                            "id": "djQ6OTEzMDM0ODg4NTEwNTUyNjovY29tbW9uL0N1c3RvbUZpZWxkRGVmaW5pdGlvbjo:900000000000293070"
+                        },
+                        "__typename": "Common_CustomFieldDefinitionEdge"
+                    },
+                    {
+                        "cursor": "c2ltcGxlLWN1cnNvcjQ=",
+                        "node": {
+                            "schema": {
+                                "allowedValues": [
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293071_1",
+                                        "value": "DELIVERY",
+                                        "order": 1
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293071_2",
+                                        "value": "HAMED",
+                                        "order": 2
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293071_3",
+                                        "value": "SULEIMAN",
+                                        "order": 3
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293071_4",
+                                        "value": "HUSAM",
+                                        "order": 4
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293071_5",
+                                        "value": "UPS",
+                                        "order": 5
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293071_6",
+                                        "value": "FedEx",
+                                        "order": 6
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293071_7",
+                                        "value": "BAHA'A",
+                                        "order": 7
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293071_8",
+                                        "value": "BACCA",
+                                        "order": 8
+                                    }
+                                ],
+                                "allowedOperations": [
+                                    "REPORTS",
+                                    "SEARCH"
+                                ],
+                                "__typename": "Schema_Schema",
+                                "format": null,
+                                "metadataProperties": [],
+                                "id": null,
+                                "type": "string",
+                                "title": "Ship via. (inactive)"
+                            },
+                            "customFieldDefinitionMetaModel": null,
+                            "deleted": true,
+                            "associatedEntityTypes": [
+                                {
+                                    "deleted": null,
+                                    "allowedOperations": [
+                                        "REPORTS",
+                                        "SEARCH"
+                                    ],
+                                    "entityConditions": [
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_INVOICE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_ESTIMATE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_CREDIT",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_REFUND",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        }
+                                    ],
+                                    "__typename": "Common_CustomFieldDefinition_EntityType",
+                                    "type": "/transactions/Transaction"
+                                }
+                            ],
+                            "__typename": "Common_CustomFieldDefinition",
+                            "name": "udcf_5",
+                            "id": "djQ6OTEzMDM0ODg4NTEwNTUyNjovY29tbW9uL0N1c3RvbUZpZWxkRGVmaW5pdGlvbjo:900000000000293071"
+                        },
+                        "__typename": "Common_CustomFieldDefinitionEdge"
+                    },
+                    {
+                        "cursor": "c2ltcGxlLWN1cnNvcjU=",
+                        "node": {
+                            "schema": {
+                                "allowedValues": [
+                                    {
+                                        "deleted": true,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293072_1",
+                                        "value": "HAMED",
+                                        "order": 1
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293072_2",
+                                        "value": "SULEIMAN",
+                                        "order": 2
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293072_3",
+                                        "value": "BACCA",
+                                        "order": 3
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293072_4",
+                                        "value": "HUSAM",
+                                        "order": 4
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293072_5",
+                                        "value": "BAHA'A",
+                                        "order": 5
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293072_6",
+                                        "value": "WAREHOUSE",
+                                        "order": 6
+                                    },
+                                    {
+                                        "deleted": true,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293072_7",
+                                        "value": "HH",
+                                        "order": 7
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293072_8",
+                                        "value": "AHMED",
+                                        "order": 8
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293072_9",
+                                        "value": "ZAK",
+                                        "order": 9
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293072_10",
+                                        "value": "OUI",
+                                        "order": 10
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000293072_11",
+                                        "value": "MOE",
+                                        "order": 11
+                                    }
+                                ],
+                                "allowedOperations": [
+                                    "REPORTS",
+                                    "SEARCH"
+                                ],
+                                "__typename": "Schema_Schema",
+                                "format": null,
+                                "metadataProperties": [],
+                                "id": null,
+                                "type": "string",
+                                "title": "Sales Rep."
+                            },
+                            "customFieldDefinitionMetaModel": null,
+                            "deleted": false,
+                            "associatedEntityTypes": [
+                                {
+                                    "deleted": null,
+                                    "allowedOperations": [
+                                        "REPORTS",
+                                        "SEARCH"
+                                    ],
+                                    "entityConditions": [
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [],
+                                            "subtype": "CUSTOMER",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        }
+                                    ],
+                                    "__typename": "Common_CustomFieldDefinition_EntityType",
+                                    "type": "/network/Contact"
+                                },
+                                {
+                                    "deleted": false,
+                                    "allowedOperations": [
+                                        "REPORTS",
+                                        "SEARCH"
+                                    ],
+                                    "entityConditions": [
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_INVOICE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_CREDIT",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_ESTIMATE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "PURCHASE_ORDER",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_REFUND",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        }
+                                    ],
+                                    "__typename": "Common_CustomFieldDefinition_EntityType",
+                                    "type": "/transactions/Transaction"
+                                }
+                            ],
+                            "__typename": "Common_CustomFieldDefinition",
+                            "name": "udcf_6",
+                            "id": "djQ6OTEzMDM0ODg4NTEwNTUyNjovY29tbW9uL0N1c3RvbUZpZWxkRGVmaW5pdGlvbjo:900000000000293072"
+                        },
+                        "__typename": "Common_CustomFieldDefinitionEdge"
+                    },
+                    {
+                        "cursor": "c2ltcGxlLWN1cnNvcjY=",
+                        "node": {
+                            "schema": {
+                                "allowedValues": [],
+                                "allowedOperations": [
+                                    "REPORTS",
+                                    "SEARCH"
+                                ],
+                                "__typename": "Schema_Schema",
+                                "format": null,
+                                "metadataProperties": null,
+                                "id": null,
+                                "type": "string",
+                                "title": "P.O. Number -1 (inactive)"
+                            },
+                            "customFieldDefinitionMetaModel": null,
+                            "deleted": true,
+                            "associatedEntityTypes": [
+                                {
+                                    "deleted": null,
+                                    "allowedOperations": [
+                                        "REPORTS",
+                                        "SEARCH"
+                                    ],
+                                    "entityConditions": [
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_INVOICE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_ESTIMATE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_CREDIT",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE_REFUND",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [],
+                                            "subtype": "SALE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        }
+                                    ],
+                                    "__typename": "Common_CustomFieldDefinition_EntityType",
+                                    "type": "/transactions/Transaction"
+                                }
+                            ],
+                            "__typename": "Common_CustomFieldDefinition",
+                            "name": "udcf_7",
+                            "id": "djQ6OTEzMDM0ODg4NTEwNTUyNjovY29tbW9uL0N1c3RvbUZpZWxkRGVmaW5pdGlvbjo:900000000000293186"
+                        },
+                        "__typename": "Common_CustomFieldDefinitionEdge"
+                    },
+                    {
+                        "cursor": "c2ltcGxlLWN1cnNvcjc=",
+                        "node": {
+                            "schema": {
+                                "allowedValues": [
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000359066_1",
+                                        "value": "C.O.D",
+                                        "order": 1
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000359066_2",
+                                        "value": "INV TO INV",
+                                        "order": 2
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000359066_3",
+                                        "value": "CALL REP",
+                                        "order": 3
+                                    }
+                                ],
+                                "allowedOperations": [
+                                    "REPORTS",
+                                    "SEARCH"
+                                ],
+                                "__typename": "Schema_Schema",
+                                "format": null,
+                                "metadataProperties": [],
+                                "id": null,
+                                "type": "string",
+                                "title": "TERMS"
+                            },
+                            "customFieldDefinitionMetaModel": null,
+                            "deleted": false,
+                            "associatedEntityTypes": [
+                                {
+                                    "deleted": false,
+                                    "allowedOperations": [
+                                        "REPORTS",
+                                        "SEARCH"
+                                    ],
+                                    "entityConditions": [
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_ESTIMATE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        },
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [
+                                                "PRINT"
+                                            ],
+                                            "subtype": "SALE_INVOICE",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        }
+                                    ],
+                                    "__typename": "Common_CustomFieldDefinition_EntityType",
+                                    "type": "/transactions/Transaction"
+                                }
+                            ],
+                            "__typename": "Common_CustomFieldDefinition",
+                            "name": "udcf_8",
+                            "id": "djQ6OTEzMDM0ODg4NTEwNTUyNjovY29tbW9uL0N1c3RvbUZpZWxkRGVmaW5pdGlvbjo:900000000000359066"
+                        },
+                        "__typename": "Common_CustomFieldDefinitionEdge"
+                    },
+                    {
+                        "cursor": "c2ltcGxlLWN1cnNvcjg=",
+                        "node": {
+                            "schema": {
+                                "allowedValues": [
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000371678_1",
+                                        "value": "BACCA W",
+                                        "order": 1
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000371678_2",
+                                        "value": "SULEIMAN W",
+                                        "order": 2
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000371678_3",
+                                        "value": "BAHA'A W",
+                                        "order": 3
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000371678_4",
+                                        "value": "ZAK W",
+                                        "order": 4
+                                    },
+                                    {
+                                        "deleted": false,
+                                        "__typename": "Schema_Schema_AllowedValue",
+                                        "id": "900000000000371678_5",
+                                        "value": "HUSAM W",
+                                        "order": 5
+                                    }
+                                ],
+                                "allowedOperations": [
+                                    "REPORTS",
+                                    "SEARCH"
+                                ],
+                                "__typename": "Schema_Schema",
+                                "format": null,
+                                "metadataProperties": [],
+                                "id": null,
+                                "type": "string",
+                                "title": "Sales Rep 2."
+                            },
+                            "customFieldDefinitionMetaModel": null,
+                            "deleted": false,
+                            "associatedEntityTypes": [
+                                {
+                                    "deleted": null,
+                                    "allowedOperations": [
+                                        "REPORTS",
+                                        "SEARCH"
+                                    ],
+                                    "entityConditions": [
+                                        {
+                                            "deleted": false,
+                                            "allowedOperations": [],
+                                            "subtype": "CUSTOMER",
+                                            "__typename": "Common_CustomFieldDefinition_EntityCondition"
+                                        }
+                                    ],
+                                    "__typename": "Common_CustomFieldDefinition_EntityType",
+                                    "type": "/network/Contact"
+                                }
+                            ],
+                            "__typename": "Common_CustomFieldDefinition",
+                            "name": "udcf_9",
+                            "id": "djQ6OTEzMDM0ODg4NTEwNTUyNjovY29tbW9uL0N1c3RvbUZpZWxkRGVmaW5pdGlvbjo:900000000000371678"
+                        },
+                        "__typename": "Common_CustomFieldDefinitionEdge"
+                    }
+                ],
+                "pageInfo": {
+                    "hasNextPage": false,
+                    "__typename": "PageInfo",
+                    "hasPreviousPage": false,
+                    "endCursor": "c2ltcGxlLWN1cnNvcjg=",
+                    "startCursor": "c2ltcGxlLWN1cnNvcjA="
+                }
+            },
+            "id": "djQuMTo5MTMwMzQ4ODg1MTA1NTI2OjI5NjA1NzY1ZDc:9130348885105526"
+        }
+    }
+}
