@@ -64,6 +64,8 @@
     <script type="text/javascript">
         (function () {
             getCustomers()
+            getTerms()
+            getSalesRep()
 
             function authorizeUri() {
 
@@ -132,7 +134,27 @@
                     addCustomerOptions(response?.QueryResponse?.Customer.map(custom => ({ text: custom?.DisplayName, value: custom.Id })))
                 });
             }
+            function getSalesRep() {
+                $.get('/getSalesRep', function (response) {
+                    addSalesRepOptions(response?.map(salesRep => ({ text: salesRep?.value, value: salesRep.id })))
+                });
+            }
+            function getTerms() {
+                $.get('/getTerms', function (response) {
+                    addTermsOptions(response?.map(salesRep => ({ text: salesRep?.value, value: salesRep.id })))
+                });
+            }
 
+            const addSalesRepOptions = (salesRepOptions) => {
+                salesRepOptions.forEach(option => {
+                    addOption(`#salesman`, option)
+                });
+            }
+            const addTermsOptions = (termOptions) => {
+                termOptions.forEach(option => {
+                    addOption(`#terms`, option)
+                });
+            }
             const addCustomerOptions = (customerOptions) => {
                 customerOptions.forEach(option => {
                     addOption(`#customer`, option)
@@ -153,7 +175,7 @@
         })();
 
 
-        
+
     </script>
 </body>
 

@@ -243,6 +243,175 @@ app.get('/getMew', function (req, res) {
       console.error(e);
     });
 });
+/**
+ * getTerms()
+ */
+app.get('/getTerms', function (req, res) {
+  res.send(JSON.parse(`[
+        {
+            "deleted": false,
+            "__typename": "Schema_Schema_AllowedValue",
+            "id": "900000000000359066_1",
+            "value": "C.O.D",
+            "order": 1
+        },
+        {
+            "deleted": false,
+            "__typename": "Schema_Schema_AllowedValue",
+            "id": "900000000000359066_2",
+            "value": "INV TO INV",
+            "order": 2
+        },
+        {
+            "deleted": false,
+            "__typename": "Schema_Schema_AllowedValue",
+            "id": "900000000000359066_3",
+            "value": "CALL REP",
+            "order": 3
+        }
+    ]`));
+});
+
+/**
+ * getSalesRep()
+ */
+app.get('/getSalesRep', function (req, res) {
+  res.send(JSON.parse(`[
+    {
+        "deleted": true,
+        "__typename": "Schema_Schema_AllowedValue",
+        "id": "900000000000293072_1",
+        "value": "HAMED",
+        "order": 1
+    },
+    {
+        "deleted": false,
+        "__typename": "Schema_Schema_AllowedValue",
+        "id": "900000000000293072_2",
+        "value": "SULEIMAN",
+        "order": 2
+    },
+    {
+        "deleted": false,
+        "__typename": "Schema_Schema_AllowedValue",
+        "id": "900000000000293072_3",
+        "value": "BACCA",
+        "order": 3
+    },
+    {
+        "deleted": false,
+        "__typename": "Schema_Schema_AllowedValue",
+        "id": "900000000000293072_4",
+        "value": "HUSAM",
+        "order": 4
+    },
+    {
+        "deleted": false,
+        "__typename": "Schema_Schema_AllowedValue",
+        "id": "900000000000293072_5",
+        "value": "BAHA'A",
+        "order": 5
+    },
+    {
+        "deleted": false,
+        "__typename": "Schema_Schema_AllowedValue",
+        "id": "900000000000293072_6",
+        "value": "WAREHOUSE",
+        "order": 6
+    },
+    {
+        "deleted": true,
+        "__typename": "Schema_Schema_AllowedValue",
+        "id": "900000000000293072_7",
+        "value": "HH",
+        "order": 7
+    },
+    {
+        "deleted": false,
+        "__typename": "Schema_Schema_AllowedValue",
+        "id": "900000000000293072_8",
+        "value": "AHMED",
+        "order": 8
+    },
+    {
+        "deleted": false,
+        "__typename": "Schema_Schema_AllowedValue",
+        "id": "900000000000293072_9",
+        "value": "ZAK",
+        "order": 9
+    },
+    {
+        "deleted": false,
+        "__typename": "Schema_Schema_AllowedValue",
+        "id": "900000000000293072_10",
+        "value": "OUI",
+        "order": 10
+    },
+    {
+        "deleted": false,
+        "__typename": "Schema_Schema_AllowedValue",
+        "id": "900000000000293072_11",
+        "value": "MOE",
+        "order": 11
+    }
+]`));
+});
+
+
+/**
+ * getCustomers ()
+ */
+app.get('/estimate', function (req, res) {
+  const companyID = oauthClient.getToken().realmId;
+
+  const url =
+    oauthClient.environment == 'sandbox'
+      ? OAuthClient.environment.sandbox
+      : OAuthClient.environment.production;
+
+  const payload = {
+    "CustomerRef": {
+      "name": "Cool Cars",
+      "value": "3"
+    },
+    "Line": [
+      {
+        "Description": "Pest Control Services",
+        "DetailType": "SalesItemLineDetail",
+        "SalesItemLineDetail": {
+          "TaxCodeRef": {
+            "value": "NON"
+          },
+          "Qty": 1,
+          "UnitPrice": 35,
+          "ItemRef": {
+            "name": "Pest Control",
+            "value": "10"
+          }
+        },
+        "LineNum": 1,
+        "Amount": 35.0,
+        "Id": "1"
+      },]
+  }
+  oauthClient
+    .makeApiCall({
+      url: `${url}/v3/company/${companyID}/estimate`,
+      method: 'POST',
+      body: payload,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then(function (authResponse) {
+      console.log(`The response for API call is :${JSON.stringify(authResponse)}`);
+      res.send(JSON.parse(authResponse.text()));
+    })
+    .catch(function (e) {
+      console.error(e);
+    });
+});
+
 
 /**
  * disconnect ()
