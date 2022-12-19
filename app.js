@@ -154,14 +154,16 @@ app.get('/retrieveToken', function (req, res) {
  * Refresh the access-token
  */
 app.get('/refreshAccessToken', function (req, res) {
+  if (!oauthClient) { res.send(null); return; }
   oauthClient
-    .refresh()
-    .then(function (authResponse) {
+    ?.refresh()
+    ?.then(function (authResponse) {
       console.log(`The Refresh Token is  ${JSON.stringify(authResponse.getJson())}`);
       oauth2_token_json = JSON.stringify(authResponse.getJson(), null, 2);
       res.send(oauth2_token_json);
     })
-    .catch(function (e) {
+    ?.catch(function (e) {
+      res.send(JSON.parse(""));
       console.error(e);
     });
 });
@@ -186,6 +188,7 @@ app.get('/getCompanyInfo', function (req, res) {
       res.send(JSON.parse(authResponse.text()));
     })
     .catch(function (e) {
+      res.send(JSON.parse(""));
       console.error(e);
     });
 });
