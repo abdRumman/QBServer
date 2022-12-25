@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="apple-touch-icon icon shortcut" type="image/png"
+        href="https://plugin.intuitcdn.net/sbg-web-shell-ui/6.3.0/shell/harmony/images/QBOlogo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+
+    <div id="qbConnecter">
+        <div>
+            <h5>Please Authorize Using Connect to Quickbooks first !</h5>
+            <a class="imgLink" href="#" id="authorizeUri"><img src="./images/C2QB_green_btn_lg_default.png"
+                    width="178" /></a>
+        </div>
+    </div>
+
+    <div id="customers" class="container">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Company Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Primary Phone</th>
+                    <th scope="col">Balance</th>
+                </tr>
+            </thead>
+            <tbody id="customerTableBody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+        (function () {
+            $("#qbConnecter").hide()
+            loadData()
+
+            function loadData() {
+                retrieveToken().done((token) => {
+
+                    if (!token) {
+                        setTimeout(authorizeUri, 1000)
+                    } else {
+                        getCustomers()
+
+                    }
+                })
+            }
+            function authorizeUri() {
+
+                // Generate the authUri
+                var jsonBody = {
+                    clientId: `AB0dZiGusUgm3gAC6UK4ngLmg04xNhKbuoT6rTO9xqqNc4rHoe`,
+                    clientSecret: `6bRtDE5QYr8nuRoHA8HREJsvUBIcHlGBQOANl9Ww`,
+                    environment: `sandbox`,
+                    redirectUri: 1 === 1 ? `http://localhost:3003/callback` : `https://abood-abood.onrender.com/callback`
+                };
+                /*      jsonBody.clientId = $('#clientId').val();
+                     jsonBody.clientSecret = $('#clientSecret').val();
+                     jsonBody.environment = $('#environment').val();
+                     jsonBody.redirectUri = $('#redirectUri').val(); */
+
+                $.get('/authUri', { json: jsonBody }, function (uri) {
+                    console.log('The Auth Uris is :' + uri);
+                })
+                    .then(function (authUri) {
+                        // Launch Popup using the JS window Object
+                        var parameters = "location=1,width=500,height=500";
+                        parameters += ",left=" + (screen.width - 500) / 2 + ",top=" + (screen.height - 500) / 2;
+                        var win = window.open(authUri, 'connectPopup2', parameters);
+                        var pollOAuth = window.setInterval(function () {
+                            try {
+                                if (win?.document?.URL?.indexOf("code") != -1) {
+                                    window.clearInterval(pollOAuth);
+                                    win.close();
+                                    setTimeout(() => {
+                                        retrieveToken().done((token) => {
+                                            if (!!token) {
+                                                $("#customers").show()
+                                                $("#qbConnecter").hide()
+                                                getCustomers()
+                                            } else {
+                                                $("#qbConnecter").show()
+                                                $("#customers").hide()
+                                            }
+                                        })
+                                    }, 2000)
+
+                                }
+                            } catch (e) {
+                                console.log(e)
+                            }
+                        }, 100);
+                    });
+            }
+
+            function retrieveToken() {
+
+                // Generate the authUri
+                return $.get('/retrieveToken', function (token) {
+                    var token = (token != null) ? token : 'Please Authorize Using Connect to Quickbooks first !';
+
+                });
+            }
+
+            function refreshToken() {
+
+                // Generate the authUri
+                return $.get('/refreshAccessToken', function (token) {
+
+                    var newToken = (token != null) ? token : 'Please Authorize Using Connect to Quickbooks first !';
+
+                });
+            }
+
+            function makeAPICall() {
+
+                // Generate the authUri
+                $.get('/getCompanyInfo', function (response) {
+                    $("#apiCall").html(JSON.stringify(response, null, 4));
+                });
+            }
+
+            function getCustomers() {
+                $.get('/getCustomers', function (response) {
+                    addCustomerRows(response?.QueryResponse?.Customer)
+                });
+            }
+
+
+            const addCustomerRows = (customers) => {
+                customers.forEach((customer, index) => {
+
+                    addCustomerToTheTable(index,`#customerTableBody`, customer)
+                });
+            }
+
+            function addCustomerToTheTable(index, id, item) {
+                $(id).append(`<tr>
+                                <th scope="row">${index}</th>
+                                <td>${item.CompanyName || item.DisplayName }</td>
+                                <td>${item.BillAddr?.Line1} - ${item.BillAddr?.City}</td>
+                                <td>${item.PrimaryPhone?.FreeFormNumber}</td>
+                                <td>${item.Balance}</td>
+                                </tr>`);
+            }
+
+            document.getElementById('authorizeUri').addEventListener('click', function response(e) {
+                e.preventDefault();
+                authorizeUri();
+            });
+
+        })();
+
+
+
+    </script>
+</body>
+
+</html>
