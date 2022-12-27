@@ -184,7 +184,7 @@ app.get('/getCompanyInfo', function (req, res) {
       url: `${url}v3/company/${companyID}/companyinfo/${companyID}`
     })
     .then(function (authResponse) {
-      console.log(`The response for API call is :${JSON.stringify(authResponse)}`);
+      //console.log(`The response for API call is :${JSON.stringify(authResponse)}`);
       res.send(JSON.parse(authResponse.text()));
     })
     .catch(function (e) {
@@ -212,7 +212,7 @@ app.get('/getCustomers', function (req, res) {
       },
     })
     .then(function (authResponse) {
-      console.log(`The response for API call is :${JSON.stringify(authResponse)}`);
+      //console.log(`The response for API call is :${JSON.stringify(authResponse)}`);
       res.send(JSON.parse(authResponse.text()));
     })
     .catch(function (e) {
@@ -239,7 +239,7 @@ app.get('/getMew', function (req, res) {
       },
     })
     .then(function (authResponse) {
-      console.log(`The response for API call is :${JSON.stringify(authResponse)}`);
+      //console.log(`The response for API call is :${JSON.stringify(authResponse)}`);
       res.send(JSON.parse(authResponse.text()));
     })
     .catch(function (e) {
@@ -364,7 +364,7 @@ app.get('/getSalesRep', function (req, res) {
 /**
  * getCustomers ()
  */
-app.get('/estimate', function (req, res) {
+app.post('/estimate', function (req, res) {
   const companyID = oauthClient.getToken().realmId;
 
   const url =
@@ -397,17 +397,18 @@ app.get('/estimate', function (req, res) {
         "Id": "1"
       },]
   }
+  console.log({ payload: req.body })
   oauthClient
     .makeApiCall({
       url: `${url}/v3/company/${companyID}/estimate`,
       method: 'POST',
-      body: payload,
+      body: req.body,
       headers: {
         'Content-Type': 'application/json',
       },
     })
     .then(function (authResponse) {
-      console.log(`The response for API call is :${JSON.stringify(authResponse)}`);
+      //console.log(`The response for API call is :${JSON.stringify(authResponse)}`);
       res.send(JSON.parse(authResponse.text()));
     })
     .catch(function (e) {

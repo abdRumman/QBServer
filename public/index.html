@@ -166,6 +166,11 @@
                 });
             }
 
+            function estimate(payload) {
+                return $.post('/estimate', payload, function (response) {
+                    alert("Estimate succeeded")
+                });
+            }
             function getCustomers() {
                 $.get('/getCustomers', function (response) {
                     addCustomerOptions(response?.QueryResponse?.Customer.map(custom => ({ text: custom?.DisplayName, value: custom.Id })))
@@ -207,6 +212,39 @@
             document.getElementById('authorizeUri').addEventListener('click', function response(e) {
                 e.preventDefault();
                 authorizeUri();
+            });
+
+            document.getElementById('Estimate').addEventListener('click', e => {
+                e.preventDefault();
+                const customer = $("#customer").val()
+                const customerText = $("#customer option:selected").text().trim()
+                console.log({ customer, customerText })
+                const items = window?.items?.items ?? []
+                const payload = {
+                    "CustomerRef": {
+                        "name": customerText,
+                        "value": customer
+                    },
+                    "Line": items.map((item, index) => ({
+                        "Description": item.title,
+                        "DetailType": item.title,
+                        "SalesItemLineDetail": {
+                            "TaxCodeRef": {
+                                "value": "NON"
+                            },
+                            "Qty": item.quantity,
+                            "UnitPrice": item.price / 100,
+                            "ItemRef": {
+                                "name": item.product_title,
+                                "value": item.product_id
+                            }
+                        },
+                        "LineNum": index,
+                        "Amount": item.original_line_price / 100,
+                        "Id": item.id
+                    })) ?? []
+                }
+                estimate(payload).then(() => window.close()).fail(error => prompt("Estimate failed"))
             });
 
         })();
