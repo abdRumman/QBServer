@@ -76,13 +76,9 @@
         (function () {
             let items = []
             $("#qbConnecter").hide()
+            console.log(getUrlParameter("items"))
+            items = JSON.parse(getUrlParameter("items"))?.items ?? []
 
-            window.addEventListener('message', (event) => {
-                if (event.data) {
-                    items = JSON.parse(event.data)?.items ?? []
-                    console.log({items: items})
-                }
-            })
             loadData()
 
             function loadData() {
@@ -97,6 +93,13 @@
                     }
                 })
             }
+
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            };
             function authorizeUri() {
 
                 // Generate the authUri
@@ -227,7 +230,7 @@
                 const customer = $("#customer").val()
                 const customerText = $("#customer option:selected").text().trim()
                 console.log({ customer, customerText })
-               
+
 
                 const payload = {
                     "CustomerRef": {
