@@ -412,6 +412,9 @@ app.post('/estimate', function (req, res) {
       res.send(JSON.parse(authResponse.text()));
     })
     .catch(function (e) {
+      res.status(400).send({
+        message: 'This is an error!'
+      });
       console.error(e);
     });
 });

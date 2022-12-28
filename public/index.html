@@ -75,6 +75,13 @@
     <script type="text/javascript">
         (function () {
             $("#qbConnecter").hide()
+         
+            window.addEventListener('message', (event) => {
+                if (event.data) {
+                    const items = JSON.parse(event.data)?.items ?? []
+                    console.log(JSON.parse(event.data))
+                }
+            })
             loadData()
 
             function loadData() {
@@ -219,7 +226,8 @@
                 const customer = $("#customer").val()
                 const customerText = $("#customer option:selected").text().trim()
                 console.log({ customer, customerText })
-                const items = window?.items?.items ?? []
+               
+
                 const payload = {
                     "CustomerRef": {
                         "name": customerText,
@@ -244,7 +252,7 @@
                         "Id": item.id
                     })) ?? []
                 }
-                estimate(payload).then(() => window.close()).fail(error => prompt("Estimate failed"))
+                estimate(payload).then(() => window.close()).fail(error => alert("Estimate failed"))
             });
 
         })();
