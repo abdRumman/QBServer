@@ -236,7 +236,7 @@
                     },
                     "Line": items?.map((item, index) => ({
                         "Description": item.title,
-                        "DetailType": item.title,
+                        "DetailType": "SalesItemLineDetail",
                         "SalesItemLineDetail": {
                             "TaxCodeRef": {
                                 "value": "NON"
@@ -245,12 +245,12 @@
                             "UnitPrice": item.price / 100,
                             "ItemRef": {
                                 "name": item.product_title,
-                                "value": item.product_id
+                                "value": `${index + 1}`
                             }
                         },
                         "LineNum": index,
                         "Amount": item.original_line_price / 100,
-                        "Id": item.id
+                        "Id": `${index + 1}`
                     })) ?? []
                 }
                 console.log({ payload })
