@@ -74,12 +74,13 @@
 
     <script type="text/javascript">
         (function () {
+            let items = []
             $("#qbConnecter").hide()
-         
+
             window.addEventListener('message', (event) => {
                 if (event.data) {
-                    const items = JSON.parse(event.data)?.items ?? []
-                    console.log(JSON.parse(event.data))
+                    items = JSON.parse(event.data)?.items ?? []
+                    console.log({items: items})
                 }
             })
             loadData()
@@ -233,7 +234,7 @@
                         "name": customerText,
                         "value": customer
                     },
-                    "Line": items.map((item, index) => ({
+                    "Line": items?.map((item, index) => ({
                         "Description": item.title,
                         "DetailType": item.title,
                         "SalesItemLineDetail": {
@@ -252,6 +253,7 @@
                         "Id": item.id
                     })) ?? []
                 }
+                console.log({ payload })
                 estimate(payload).then(() => window.close()).fail(error => alert("Estimate failed"))
             });
 
