@@ -13,6 +13,11 @@ const path = require('path');
 const OAuthClient = require('intuit-oauth');
 const bodyParser = require('body-parser');
 const ngrok = process.env.NGROK_ENABLED === 'true' ? require('ngrok') : null;
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 const cc = {
   query: `CustomFieldsQuery__qbo_custom_fields_ui_qbo {
