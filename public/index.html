@@ -76,8 +76,9 @@
         (function () {
             let items = []
             $("#qbConnecter").hide()
-            console.log(getUrlParameter("items"))
-            items = JSON.parse(getUrlParameter("items"))?.items ?? []
+            const itemString = getUrlParameter("items")
+            console.log(itemString)
+            items = itemString !== "" ? JSON.parse(getUrlParameter("items"))?.items ?? [] : []
 
             loadData()
 
