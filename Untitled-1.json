@@ -1362,10 +1362,177 @@
           "sparse": false, 
           "Id": "1"
         }, 
-       
+        {
+          "domain": "QBO", 
+          "PrimaryEmailAddr": {
+            "Address": "Consulting@intuit.com"
+          }, 
+          "DisplayName": "Weiskopf Consulting", 
+          "FamilyName": "Weiskopf", 
+          "PreferredDeliveryMethod": "Print", 
+          "GivenName": "Nicola", 
+          "FullyQualifiedName": "Weiskopf Consulting", 
+          "BillWithParent": false, 
+          "Job": false, 
+          "BalanceWithJobs": 390.0, 
+          "PrimaryPhone": {
+            "FreeFormNumber": "(650) 555-1423"
+          }, 
+          "Active": true, 
+          "MetaData": {
+            "CreateTime": "2014-09-11T17:29:04-07:00", 
+            "LastUpdatedTime": "2015-06-24T15:54:02-07:00"
+          }, 
+          "BillAddr": {
+            "City": "Bayshore", 
+            "Line1": "45612 Main St.", 
+            "PostalCode": "94326", 
+            "Lat": "45.256574", 
+            "Long": "-66.0943698", 
+            "CountrySubDivisionCode": "CA", 
+            "Id": "30"
+          }, 
+          "Taxable": false, 
+          "Balance": 390.0, 
+          "SyncToken": "0", 
+          "CompanyName": "Weiskopf Consulting", 
+          "ShipAddr": {
+            "City": "Bayshore", 
+            "Line1": "45612 Main St.", 
+            "PostalCode": "94326", 
+            "Lat": "45.256574", 
+            "Long": "-66.0943698", 
+            "CountrySubDivisionCode": "CA", 
+            "Id": "30"
+          }, 
+          "PrintOnCheckName": "Weiskopf Consulting", 
+          "sparse": false, 
+          "Id": "29"
+        }
       ], 
       "startPosition": 1, 
       "maxResults": 6
     }, 
     "time": "2015-07-23T11:02:25.149-07:00"
+  }
+
+
+
+  // from shopifi 
+
+  {
+    "note": null,
+    "attributes": {},
+    "original_total_price": 9575,
+    "total_price": 9575,
+    "total_discount": 0,
+    "total_weight": 0,
+    "item_count": 3,
+    "items": [
+      {
+        "id": 42519451074729,
+        "properties": {},
+        "quantity": 2,
+        "variant_id": 42519451074729,
+        "key": "42519451074729:aeb9471ffc87e5f3d324d6fd41ee9b8a",
+        "title": "POLICE GRADE TASER W/ 3 CARTS GIFT BOX (1CT)",
+        "price": 3600,
+        "original_price": 3600,
+        "discounted_price": 3600,
+        "line_price": 7200,
+        "original_line_price": 7200,
+        "total_discount": 0,
+        "discounts": [],
+        "sku": "KN26",
+        "grams": 0,
+        "vendor": "Warehouse Fever",
+        "taxable": false,
+        "product_id": 7576170725545,
+        "product_has_only_default_variant": true,
+        "gift_card": false,
+        "final_price": 3600,
+        "final_line_price": 7200,
+        "url": "/products/police-grade-taser-w-3-carts-gift-box-1ct?variant=42519451074729",
+        "featured_image": {
+          "aspect_ratio": 1,
+          "alt": "POLICE GRADE TASER W/ 3 CARTS GIFT BOX (1CT)",
+          "height": 800,
+          "url": "https://cdn.shopify.com/s/files/1/0517/7819/1529/products/Screenshot2022-08-29at15-40-19s-zoom.webp_WEBPImage800x800pixels.png?v=1661805733",
+          "width": 800
+        },
+        "image": "https://cdn.shopify.com/s/files/1/0517/7819/1529/products/Screenshot2022-08-29at15-40-19s-zoom.webp_WEBPImage800x800pixels.png?v=1661805733",
+        "handle": "police-grade-taser-w-3-carts-gift-box-1ct",
+        "requires_shipping": true,
+        "product_type": "defense",
+        "product_title": "POLICE GRADE TASER W/ 3 CARTS GIFT BOX (1CT)",
+        "product_description": "",
+        "variant_title": null,
+        "variant_options": [
+          "Default Title"
+        ],
+        "options_with_values": [
+          {
+            "name": "Title",
+            "value": "Default Title"
+          }
+        ],
+        "line_level_discount_allocations": [],
+        "line_level_total_discount": 0
+      },
+      {
+        "id": 41767523254441,
+        "properties": {},
+        "quantity": 1,
+        "variant_id": 41767523254441,
+        "key": "41767523254441:b0b92189387c837d1376789afd943bd2",
+        "title": "1 1/4 Organic Hemp Papers (24ct)",
+        "price": 2375,
+        "original_price": 2375,
+        "discounted_price": 2375,
+        "line_price": 2375,
+        "original_line_price": 2375,
+        "total_discount": 0,
+        "discounts": [],
+        "sku": "00736",
+        "grams": 0,
+        "vendor": "Warehouse Fever",
+        "taxable": false,
+        "product_id": 7346208669865,
+        "product_has_only_default_variant": true,
+        "gift_card": false,
+        "final_price": 2375,
+        "final_line_price": 2375,
+        "url": "/products/1-1-4-organic-hemp-papers-24ct?variant=41767523254441",
+        "featured_image": {
+          "aspect_ratio": 1,
+          "alt": "1 1/4 Organic Hemp Papers (24ct)",
+          "height": 640,
+          "url": "https://cdn.shopify.com/s/files/1/0517/7819/1529/products/Zig_Zag_-_Organic_Hemp_-_1_Paper__70098.1520282050.1280.1280.jpg?v=1638982794",
+          "width": 640
+        },
+        "image": "https://cdn.shopify.com/s/files/1/0517/7819/1529/products/Zig_Zag_-_Organic_Hemp_-_1_Paper__70098.1520282050.1280.1280.jpg?v=1638982794",
+        "handle": "1-1-4-organic-hemp-papers-24ct",
+        "requires_shipping": true,
+        "product_type": "PAPER",
+        "product_title": "1 1/4 Organic Hemp Papers (24ct)",
+        "product_description": "",
+        "variant_title": null,
+        "variant_options": [
+          "Default Title"
+        ],
+        "options_with_values": [
+          {
+            "name": "Title",
+            "value": "Default Title"
+          }
+        ],
+        "line_level_discount_allocations": [],
+        "line_level_total_discount": 0
+      }
+    ],
+    "requires_shipping": true,
+    "currency": "USD",
+    "items_subtotal_price": 9575,
+    "cart_level_discount_applications": [],
+    "checkout_charge_amount": 9575
   }
