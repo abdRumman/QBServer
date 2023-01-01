@@ -227,7 +227,7 @@ app.get('/getCustomers', function (req, res) {
 /**
  * getMew()
  */
-app.get('/getMew', function (req, res) {
+app.get('/getPreferences', function (req, res) {
   const companyID = oauthClient.getToken().realmId;
 
   const url =

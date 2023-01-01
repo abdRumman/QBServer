@@ -147,7 +147,7 @@
             function makeAPICall() {
 
                 // Generate the authUri
-                $.get('/getCompanyInfo', function (response) {
+                $.get('/getPreferences', function (response) {
                     $("#apiCall").html(JSON.stringify(response, null, 4));
                 });
             }
