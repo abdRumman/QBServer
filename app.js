@@ -200,6 +200,35 @@ app.get('/getCompanyInfo', function (req, res) {
 /**
  * getCustomers ()
  */
+app.get('/getItems', function (req, res) {
+  const companyID = oauthClient.getToken().realmId;
+
+  const url =
+    oauthClient.environment == 'sandbox'
+      ? OAuthClient.environment.sandbox
+      : OAuthClient.environment.production;
+
+  oauthClient
+    .makeApiCall({
+      url: `${url}/v3/company/${companyID}/query?query=select * from Item&minorversion=65`,
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then(function (authResponse) {
+      //console.log(`The response for API call is :${JSON.stringify(authResponse)}`);
+      res.send(JSON.parse(authResponse.text()));
+    })
+    .catch(function (e) {
+      console.error(e);
+    });
+});
+
+
+/**
+ * getCustomers ()
+ */
 app.get('/getCustomers', function (req, res) {
   const companyID = oauthClient.getToken().realmId;
 
@@ -224,6 +253,7 @@ app.get('/getCustomers', function (req, res) {
       console.error(e);
     });
 });
+ 
 /**
  * getMew()
  */

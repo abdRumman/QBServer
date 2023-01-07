@@ -79,6 +79,7 @@
             const itemString = getUrlParameter("items")
             console.log(itemString)
             items = itemString !== "" ? JSON.parse(getUrlParameter("items"))?.items ?? [] : []
+            let QBOItems = []
 
             loadData()
 
@@ -91,6 +92,8 @@
                         getCustomers()
                         getTerms()
                         getSalesRep()
+                        getItems()
+
                     }
                 })
             }
@@ -136,6 +139,8 @@
                                                 getCustomers()
                                                 getTerms()
                                                 getSalesRep()
+                                                getItems()
+
                                             } else {
                                                 $("#qbConnecter").show()
                                                 $("#estimateForm").hide()
@@ -198,6 +203,12 @@
                     addTermsOptions(response?.map(salesRep => ({ text: salesRep?.value, value: salesRep.id })))
                 });
             }
+            function getItems() {
+                $.get('/getItems', function (response) {
+                    QBOItems = response.QueryResponse.Item
+                    console.log({ QBOItems })
+                });
+            }
 
             const addSalesRepOptions = (salesRepOptions) => {
                 salesRepOptions.forEach(option => {
@@ -238,24 +249,28 @@
                         "name": customerText,
                         "value": customer
                     },
-                    "Line": items?.map((item, index) => ({
-                        "Description": item.title,
-                        "DetailType": "SalesItemLineDetail",
-                        "SalesItemLineDetail": {
-                            "TaxCodeRef": {
-                                "value": "NON"
+                    "Line": items?.map((item, index) => {
+
+                        const qpoItemId = QBOItems.find(qboItem => qboItem.Name.trim().toLowerCase() === item.sku.trim().toLowerCase())
+                        return {
+                            "Description": item.title,
+                            "DetailType": "SalesItemLineDetail",
+                            "SalesItemLineDetail": {
+                                "TaxCodeRef": {
+                                    "value": "NON"
+                                },
+                                "Qty": item.quantity,
+                                "UnitPrice": item.price / 100,
+                                "ItemRef": {
+                                    "name": qpoItemId?.Name,
+                                    "value": `${qpoItemId?.Id}`
+                                }
                             },
-                            "Qty": item.quantity,
-                            "UnitPrice": item.price / 100,
-                            "ItemRef": {
-                                "name": item.product_title,
-                                "value": `${index + 1}`
-                            }
-                        },
-                        "LineNum": index,
-                        "Amount": item.original_line_price / 100,
-                        "Id": `${index + 1}`
-                    })) ?? []
+                            "LineNum": index,
+                            "Amount": item.original_line_price / 100,
+                            "Id": `${index + 1}`
+                        }
+                    }) ?? []
                 }
                 console.log({ payload })
                 estimate(payload).then(() => window.close()).fail(error => alert("Estimate failed"))
